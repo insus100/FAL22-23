@@ -13,7 +13,7 @@ using namespace std;
 bool resolver(const vector<int>& datos, const int &N) {
     bool dalton = true;
     int i = 0;
-    while(dalton && i < N - 1) {//creciente de izquierda a derecha
+    while(dalton && i < N - 1) {//creciente de izquierda a derecha?
         if (datos[i] >= datos[i + 1])
             dalton = false;
         i++;
@@ -22,7 +22,7 @@ bool resolver(const vector<int>& datos, const int &N) {
     if (!dalton) {
         dalton = true;
         i = N - 1;
-        while (dalton && i > 0) {
+        while (dalton && i > 0) {//creciente de derecha a izquierda?
             if (datos[i - 1] <= datos[i])
                 dalton = false;
             i--;

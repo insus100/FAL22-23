@@ -22,7 +22,7 @@ bool resolver(const vector<int>& datos, const int &N) {
     if (!dalton) {
         dalton = true;
         i = N - 1;
-        while (i > 0) {
+        while (dalton && i > 0) {
             if (datos[i - 1] <= datos[i])
                 dalton = false;
             i--;

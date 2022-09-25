@@ -5,7 +5,7 @@
 #include <iostream>
 #include <iomanip>
 #include <fstream>
-
+#include <climits>
 using namespace std;
 // función que resuelve el problema
 

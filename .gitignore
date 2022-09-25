@@ -1,0 +1,5 @@
+FALProblems/.vs
+FALProblems/x64
+FALProblems/x86
+FALProblems/*/x64
+FALProblems/*/x86

@@ -21,6 +21,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Evolucion_de_los_beneficios
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Rescate_aereo_1", "Rescate_aereo_1\Rescate_aereo_1.vcxproj", "{4CE81243-44DB-4FB5-95B1-38709D241320}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Reservas_de_elefantes", "Reservas_de_elefantes\Reservas_de_elefantes.vcxproj", "{24792070-72A5-44EF-81A3-4123A6CE54D6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -101,6 +103,14 @@ Global
 		{4CE81243-44DB-4FB5-95B1-38709D241320}.Release|x64.Build.0 = Release|x64
 		{4CE81243-44DB-4FB5-95B1-38709D241320}.Release|x86.ActiveCfg = Release|Win32
 		{4CE81243-44DB-4FB5-95B1-38709D241320}.Release|x86.Build.0 = Release|Win32
+		{24792070-72A5-44EF-81A3-4123A6CE54D6}.Debug|x64.ActiveCfg = Debug|x64
+		{24792070-72A5-44EF-81A3-4123A6CE54D6}.Debug|x64.Build.0 = Debug|x64
+		{24792070-72A5-44EF-81A3-4123A6CE54D6}.Debug|x86.ActiveCfg = Debug|Win32
+		{24792070-72A5-44EF-81A3-4123A6CE54D6}.Debug|x86.Build.0 = Debug|Win32
+		{24792070-72A5-44EF-81A3-4123A6CE54D6}.Release|x64.ActiveCfg = Release|x64
+		{24792070-72A5-44EF-81A3-4123A6CE54D6}.Release|x64.Build.0 = Release|x64
+		{24792070-72A5-44EF-81A3-4123A6CE54D6}.Release|x86.ActiveCfg = Release|Win32
+		{24792070-72A5-44EF-81A3-4123A6CE54D6}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

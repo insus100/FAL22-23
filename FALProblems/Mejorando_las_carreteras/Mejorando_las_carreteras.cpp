@@ -13,8 +13,8 @@ typedef long long int lli;
 typedef long long unsigned int llui;
 
 struct sol {
-    lli ini;
-    lli fin;
+    llui ini;
+    llui fin;
 };
 
 // función que resuelve el problema
@@ -28,15 +28,17 @@ int resolver(vector<int> &kms, llui const &n) {
             return kms[1];
     }*/
     sort(kms.begin(), kms.end());
-    sol Sol = { 0, -1 };
+    sol Sol = { 0, 0 };
     int moda = -1;
-    lli ini = -1, fin = -1;
+    bool segmento = false;
+    llui ini = 0, fin = 0;
     
     for (llui i = 0; i < n - 1; i++) {
         if (kms[i] == kms[i + 1]) {
-            if (ini == -1) {
+            if (!segmento) {
                 ini = i;
                 fin = i + 1;
+                segmento = true;
             }
             else fin = i + 1;
             
@@ -47,7 +49,7 @@ int resolver(vector<int> &kms, llui const &n) {
             }
         }
         else {
-            ini = -1;
+            segmento = false;
         }
     }
 

@@ -9,7 +9,7 @@
 using namespace std;
 using llui = long long unsigned int;
 struct max_punt {
-    llui pagina;
+    long long int pagina;
     llui puntuacion;
 };
 // función que resuelve el problema

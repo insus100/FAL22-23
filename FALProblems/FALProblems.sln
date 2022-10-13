@@ -25,6 +25,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Reservas_de_elefantes", "Re
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Mejorando_las_carreteras", "Mejorando_las_carreteras\Mejorando_las_carreteras.vcxproj", "{00F0803D-9A2D-4401-A85D-E01110339CAC}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Viajes_a_Marte", "Viajes_a_Marte\Viajes_a_Marte.vcxproj", "{5461BD4D-F58F-4352-804E-C71CF166352F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -121,6 +123,14 @@ Global
 		{00F0803D-9A2D-4401-A85D-E01110339CAC}.Release|x64.Build.0 = Release|x64
 		{00F0803D-9A2D-4401-A85D-E01110339CAC}.Release|x86.ActiveCfg = Release|Win32
 		{00F0803D-9A2D-4401-A85D-E01110339CAC}.Release|x86.Build.0 = Release|Win32
+		{5461BD4D-F58F-4352-804E-C71CF166352F}.Debug|x64.ActiveCfg = Debug|x64
+		{5461BD4D-F58F-4352-804E-C71CF166352F}.Debug|x64.Build.0 = Debug|x64
+		{5461BD4D-F58F-4352-804E-C71CF166352F}.Debug|x86.ActiveCfg = Debug|Win32
+		{5461BD4D-F58F-4352-804E-C71CF166352F}.Debug|x86.Build.0 = Debug|Win32
+		{5461BD4D-F58F-4352-804E-C71CF166352F}.Release|x64.ActiveCfg = Release|x64
+		{5461BD4D-F58F-4352-804E-C71CF166352F}.Release|x64.Build.0 = Release|x64
+		{5461BD4D-F58F-4352-804E-C71CF166352F}.Release|x86.ActiveCfg = Release|Win32
+		{5461BD4D-F58F-4352-804E-C71CF166352F}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

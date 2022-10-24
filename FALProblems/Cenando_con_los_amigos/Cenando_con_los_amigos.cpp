@@ -10,11 +10,38 @@ using namespace std;
 struct Sol {
     int suma;
     int ini;
+    int fin;
     int dias;
 };
+using par = pair<int, int>;
 // función que resuelve el problema
 Sol resolver(vector<int> const &datos) {
-    
+    Sol sol{ 0,0,0,0 };
+    int curSuma = 0;
+    par curIntervalo{ 0, 0 };
+    for (int i = 0; i < datos.size(); i++) {
+        curSuma += datos[i];
+        if (curSuma <= 0) {
+            curSuma = 0;
+            curIntervalo.first = i + 1;
+        }
+        else {
+            curIntervalo.second = i;
+            if(curSuma > sol.suma) {
+                sol.suma = curSuma;
+                sol.fin = i;
+                sol.ini = curIntervalo.first;
+            }
+            else if(curSuma == sol.suma) {
+                if (curIntervalo.second - curIntervalo.first < sol.fin - sol.ini) {
+                    sol.ini = curIntervalo.first;
+                    sol.fin = curIntervalo.second;
+                }
+            }
+        }
+    }
+    sol.dias = sol.fin - sol.ini + 1;
+    return sol;
 }
 
 // Resuelve un caso de prueba, leyendo de la entrada la
@@ -33,8 +60,7 @@ bool resuelveCaso() {
     Sol sol = resolver(pesos);
 
     // escribir sol
-
-
+    cout << sol.suma << " " << sol.ini << " " << sol.dias << "\n";
     return true;
 
 }

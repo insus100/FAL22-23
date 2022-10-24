@@ -18,6 +18,8 @@ struct Sol {
 // función que resuelve el problema
 Sol resolver(vector<int> const &marcas) {//O(n)
     Sol sol{0,0,0,0};
+    if (marcas.size() == 1)
+        return sol;
     int no_mejora = 0;
     par intervalo{0, 0};
     bool segmento = false;

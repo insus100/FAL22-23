@@ -27,12 +27,12 @@ Sol resolver(vector<int> const &datos) {
         }
         else {
             curIntervalo.second = i;
-            if(curSuma > sol.suma) {
+            if(curSuma > sol.suma) {//actualizamos suma e intervalo
                 sol.suma = curSuma;
                 sol.fin = i;
                 sol.ini = curIntervalo.first;
             }
-            else if(curSuma == sol.suma) {
+            else if(curSuma == sol.suma) {//actualizamos intervalo
                 if (curIntervalo.second - curIntervalo.first < sol.fin - sol.ini) {
                     sol.ini = curIntervalo.first;
                     sol.fin = curIntervalo.second;

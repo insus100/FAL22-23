@@ -18,8 +18,6 @@ struct Sol {
 // función que resuelve el problema
 Sol resolver(vector<int> const &marcas) {//O(n)
     Sol sol{0,0,0,0};
-    if (marcas.size() == 1)
-        return sol;
     int no_mejora = 0;
     par intervalo{0, 0};
     bool segmento = false;
@@ -34,7 +32,7 @@ Sol resolver(vector<int> const &marcas) {//O(n)
             if (no_mejora > sol.no_mejora) sol.no_mejora = no_mejora;
             no_mejora = 0;
         }
-        else {
+        else {//<= no mejora la marca
             no_mejora++;
             if (!segmento) {
                 intervalo.first = i;
@@ -45,6 +43,8 @@ Sol resolver(vector<int> const &marcas) {//O(n)
     }
     if (no_mejora > 0 && sol.no_mejora == 0)
         sol.no_mejora = no_mejora;
+    if (intervalo.first > 0 && sol.ini == 0)
+        sol.ini = intervalo.first;
     if (intervalo.second - intervalo.first > sol.fin - sol.ini) {
         sol.ini = intervalo.first;
         sol.fin = intervalo.second;

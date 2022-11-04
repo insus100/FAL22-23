@@ -1,55 +1,41 @@
-// Nombre del alumno .....
-// Usuario del Juez ......
 
 
 #include <iostream>
 #include <iomanip>
 #include <fstream>
 #include <vector>
-
 using namespace std;
-using par = pair<int, int>;
-struct Sol {
-    int max;
-    int no_mejora;
-    int ini;
-    int fin;
+
+struct tMarcas {
+    int no_mejora_ini = 0;
+    int no_mejora_fin = 0;
+    int periodo = 0;
 };
 // función que resuelve el problema
-Sol resolver(vector<int> const &marcas) {//O(n)
-    Sol sol{0,0,0,0};
-    if (marcas.size() == 1)
-        return sol;
-    int no_mejora = 0;
-    par intervalo{0, 0};
-    bool segmento = false;
+tMarcas resolver(vector<int> marcas) {
+    int ini_act = 0, fin_act = 0, periodo_act = 0, max_actual = 0;
+    tMarcas sol;
     for (int i = 0; i < marcas.size(); i++) {
-        if (marcas[i] > sol.max) {
-            sol.max = marcas[i];
-            segmento = false;
-            if (intervalo.second - intervalo.first >= sol.fin - sol.ini) {
-                sol.ini = intervalo.first;
-                sol.fin = intervalo.second;
-            }
-            if (no_mejora > sol.no_mejora) sol.no_mejora = no_mejora;
-            no_mejora = 0;
+        if (marcas[i] > max_actual) {//si el elemento que está en i es mayor al maximo se resetea todo
+            max_actual = marcas[i];
+            ini_act = 0;
+            fin_act = 0;
+            periodo_act = 0;
         }
-        else {
-            no_mejora++;
-            if (!segmento) {
-                intervalo.first = i;
-                segmento = true;
+        else {//el elemento en i es menor al maximo
+            fin_act = i;
+            ini_act = fin_act - periodo_act;
+            periodo_act++;
+            if (periodo_act >= sol.periodo) {//cogemos el ultimo periodo que lo cumpla
+                sol.no_mejora_ini = ini_act;
+                sol.no_mejora_fin = fin_act;
+                sol.periodo = periodo_act;
             }
-            else intervalo.second = i;
         }
     }
-    if (no_mejora > 0 && sol.no_mejora == 0)
-        sol.no_mejora = no_mejora;
-    if (intervalo.second - intervalo.first > sol.fin - sol.ini) {
-        sol.ini = intervalo.first;
-        sol.fin = intervalo.second;
+    if (ini_act == 00 && sol.no_mejora_ini == 0) {//si siempre bate la marca se devuelve marcas.size() porque es el ultimo periodo que no bate la marca
+        sol.no_mejora_ini = marcas.size();
     }
-    if (intervalo.first == 0 && sol.ini == 0) sol.ini = marcas.size();
     return sol;
 }
 
@@ -57,19 +43,19 @@ Sol resolver(vector<int> const &marcas) {//O(n)
 // configuración, y escribiendo la respuesta
 bool resuelveCaso() {
     // leer los datos de la entrada
-    int n;
-    cin >> n;
-    if (n == 0)
+    int marca, num;
+    cin >> marca;
+    if (marca == 0)
         return false;
-    vector<int> marcas(n);
-    for (int &m : marcas) {
-        cin >> m;
+    vector<int> marcas;
+    for (int i = 0; i < marca; i++) {
+        cin >> num;
+        marcas.push_back(num);
     }
-    Sol sol = resolver(marcas);
+    tMarcas sol = resolver(marcas);
 
     // escribir sol
-    cout << sol.no_mejora << " " << sol.ini << "\n";
-
+    cout << sol.periodo << " " << sol.no_mejora_ini << "\n";
     return true;
 
 }

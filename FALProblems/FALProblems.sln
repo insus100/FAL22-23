@@ -45,6 +45,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Invertir_Un_Numero", "Inver
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Numero_con_cifras_decrecientes", "Numero_con_cifras_decrecientes\Numero_con_cifras_decrecientes.vcxproj", "{A1859359-A044-4180-96BA-3D6253ED516C}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Cintas_de_colores", "Cintas_de_colores\Cintas_de_colores.vcxproj", "{32002551-3C60-4657-82E8-48A7D91643F7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -221,6 +223,14 @@ Global
 		{A1859359-A044-4180-96BA-3D6253ED516C}.Release|x64.Build.0 = Release|x64
 		{A1859359-A044-4180-96BA-3D6253ED516C}.Release|x86.ActiveCfg = Release|Win32
 		{A1859359-A044-4180-96BA-3D6253ED516C}.Release|x86.Build.0 = Release|Win32
+		{32002551-3C60-4657-82E8-48A7D91643F7}.Debug|x64.ActiveCfg = Debug|x64
+		{32002551-3C60-4657-82E8-48A7D91643F7}.Debug|x64.Build.0 = Debug|x64
+		{32002551-3C60-4657-82E8-48A7D91643F7}.Debug|x86.ActiveCfg = Debug|Win32
+		{32002551-3C60-4657-82E8-48A7D91643F7}.Debug|x86.Build.0 = Debug|Win32
+		{32002551-3C60-4657-82E8-48A7D91643F7}.Release|x64.ActiveCfg = Release|x64
+		{32002551-3C60-4657-82E8-48A7D91643F7}.Release|x64.Build.0 = Release|x64
+		{32002551-3C60-4657-82E8-48A7D91643F7}.Release|x86.ActiveCfg = Release|Win32
+		{32002551-3C60-4657-82E8-48A7D91643F7}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

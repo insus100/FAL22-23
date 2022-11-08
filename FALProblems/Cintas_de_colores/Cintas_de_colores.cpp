@@ -24,7 +24,7 @@ struct Cinta {
 };
 
 bool ordenarPorLongitud(Cinta const& a, Cinta const& b) {
-    return a.longitud <= b.longitud;
+    return a.longitud < b.longitud;
 }
 
 struct Sol {//dónde empiezan y terminan las cintas verdes

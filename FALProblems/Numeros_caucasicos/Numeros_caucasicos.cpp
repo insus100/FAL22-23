@@ -7,9 +7,13 @@
 #include <fstream>
 #include <vector>
 using namespace std;
-
+/*
+* T(n) = c                  n = 0, 1
+* T(n) = 2T(n/2) + n        n > 1;
+* coste O(nlog(n))
+*/
 // función que resuelve el problema
-pair<int, bool> resolver(vector<int> const &v, int ini, int fin) {
+pair<int, bool> resolver(vector<int> const &v, int const &ini, int const &fin) {
     if (ini == fin) {
         return { 0, true };
     }

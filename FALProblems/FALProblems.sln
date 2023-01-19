@@ -71,6 +71,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Enero2021_Recursivo", "Ener
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Enero2019_Recursivo", "Enero2019_Recursivo\Enero2019_Recursivo.vcxproj", "{79E274C8-8D50-49A0-81F5-CD5248AC1D89}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Las_N_reinas", "Las_N_reinas\Las_N_reinas.vcxproj", "{51D4108A-AF1C-41C9-A894-AA6A6395A6F1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -351,6 +353,14 @@ Global
 		{79E274C8-8D50-49A0-81F5-CD5248AC1D89}.Release|x64.Build.0 = Release|x64
 		{79E274C8-8D50-49A0-81F5-CD5248AC1D89}.Release|x86.ActiveCfg = Release|Win32
 		{79E274C8-8D50-49A0-81F5-CD5248AC1D89}.Release|x86.Build.0 = Release|Win32
+		{51D4108A-AF1C-41C9-A894-AA6A6395A6F1}.Debug|x64.ActiveCfg = Debug|x64
+		{51D4108A-AF1C-41C9-A894-AA6A6395A6F1}.Debug|x64.Build.0 = Debug|x64
+		{51D4108A-AF1C-41C9-A894-AA6A6395A6F1}.Debug|x86.ActiveCfg = Debug|Win32
+		{51D4108A-AF1C-41C9-A894-AA6A6395A6F1}.Debug|x86.Build.0 = Debug|Win32
+		{51D4108A-AF1C-41C9-A894-AA6A6395A6F1}.Release|x64.ActiveCfg = Release|x64
+		{51D4108A-AF1C-41C9-A894-AA6A6395A6F1}.Release|x64.Build.0 = Release|x64
+		{51D4108A-AF1C-41C9-A894-AA6A6395A6F1}.Release|x86.ActiveCfg = Release|Win32
+		{51D4108A-AF1C-41C9-A894-AA6A6395A6F1}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
